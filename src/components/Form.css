@@ -1,0 +1,109 @@
+form {
+  background-color: white;
+  padding: 2rem;
+  max-width: 550px;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.pizza-name h1 {
+  font-size: 2rem;
+  color: #292929;
+  font-weight: 400;
+  text-align: left;
+  flex-wrap: nowrap;
+  margin-bottom: 1rem;
+  font-family: 'Barlow';
+}
+
+.pizza-puan {
+  display: flex;
+  gap: 3rem; 
+  margin-left: auto;
+}
+
+.pizza-aciklama p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+      text-align: left;
+
+}
+
+
+/* ==== Form Alanları taslakkk ==== */
+.boyut-form label,
+#ek-malzeme-section label,
+.isim-alani input,
+.hamur-form select,
+textarea {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+.pizza-sabit-fiyat {
+  display: flex;             
+  align-items: center;       
+  justify-content: space-between; 
+  gap: 2rem;                  
+  width:531px;
+ color:#000000;
+ 
+}
+
+
+
+textarea {
+  width: 100%;
+  resize: none;
+  padding: 8px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+}
+
+/* ==== Ayraç Çizgisi ==== */
+hr {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 2px solid #ddd;
+}
+
+/* ==== Adet Sayacı ==== */
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#decrease,
+#increase {
+  background-color: #FDC913;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#decrease:hover,
+#increase:hover {
+  background-color: #e0b80f;
+}
+
+#value {
+  font-size: 1.5rem;
+  width: 30px;
+  text-align: center;
+}
+
+

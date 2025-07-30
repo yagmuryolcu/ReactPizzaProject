@@ -1,0 +1,296 @@
+import { useState , useEffect} from 'react'
+import './Form.css'
+
+ export function Form() {
+
+const [isSubmitting, setIsSubmitting] = useState(false);
+const [formValid, setFormValid] = useState(false);
+const [hamur, setHamur] = useState("");
+const [malzemeler, setMalzemeler] = useState([]);
+const [adet, setAdet] = useState(1);
+const [isim,setIsim] =useState("");
+const [boyut, setBoyut] = useState("");
+
+
+const increaseAdet = () => {
+  setAdet(adet + 1);
+};
+
+const decreaseAdet = () => {
+  if (adet > 1) {
+    setAdet(adet - 1);
+  }
+};
+ const ilk_fiyat = 85.5;
+  const extra = 5;
+
+  const handleChange = (event) => {
+    setHamur(event.target.value);
+  };
+
+  const handleMalzemeChange = (event) => {
+    const { value,checked } =event.target;
+    if (checked) {
+      if (malzemeler.length < 10) {
+        setMalzemeler([...malzemeler,value]);
+      }else {
+        alert("En fazla 10 malzeme seçebilirsiniz.");
+         event.target.checked = false;  
+         return;
+      }
+
+    } else {
+    if (malzemeler.length <= 4) {
+      alert("En az 4 malzeme seçmelisiniz.");
+      return;
+    }
+    setMalzemeler(malzemeler.filter((malzeme) => malzeme !== value));
+  }
+};
+
+   
+  const handleSubmit = (e) => {
+  e.preventDefault();
+
+  if (isim.trim().length < 3) {
+    alert("İsim en az 3 karakter olmalı.");
+    return;
+  }
+
+  if (malzemeler.length < 4) {
+    alert("En az 4 malzeme seçmelisiniz.");
+    return;
+  }
+
+  if (malzemeler.length > 11) {
+    alert("En fazla 10 malzeme seçebilirsiniz.");
+    return;
+  }
+
+  if (!formValid) {
+    alert("Formda eksik alanlar mevcut. Lütfen tüm alanları doldurun");
+    return;
+  }
+
+  setIsSubmitting(true);
+
+  setTimeout(() => {
+    console.log("Form gönderildi.");
+    console.log("Hamur:", hamur);
+    console.log("Malzemeler:", malzemeler);
+    console.log("İsim:", isim);
+    console.log("Toplam:", toplam.toFixed(2));
+    setIsSubmitting(false);
+    alert("Siparişiniz başarıyla alındı!");
+  }, 1500);
+};
+
+   
+
+  const toplam =(ilk_fiyat + malzemeler.length *extra) * adet;
+
+    
+  useEffect(() => {
+    const isValid =
+      hamur !== "" &&
+      boyut !== "" &&
+      malzemeler.length >= 4 &&
+      malzemeler.length <= 10 &&
+      isim.trim().length >= 3;
+
+    setFormValid(isValid);
+  }, [hamur, malzemeler,boyut, isim]);
+
+
+
+  return (
+    <>
+    <form onSubmit={handleSubmit}>
+
+    <div id="pizza-section">
+      <div id= "pizza-secimi">
+            <div className="pizza-name">
+            <h1>Position Absolute Acı Pizza</h1>
+            <div className="pizza-sabit-fiyat">
+            <p><b>85.50₺</b></p>
+            <div className="pizza-puan">
+            <span>4.9</span>
+           <span>(200)</span>
+            </div>
+    </div>
+      </div>
+      </div>
+         <div className="pizza-aciklama">
+
+      <p>Frontent Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre. 
+        Pizza, domates, peynir ve genellikle çeşitli diğer malzemelerle kaplanmış,
+         daha sonra geleneksel olarak odun ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle yuvarlak,
+          düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan kökenli lezzetli bir yemektir. . 
+          Küçük bir pizzaya bazen pizzetta denir.</p>
+          </div>
+       <div id="pizza-boyut-kalınlık">
+
+           <div className="boyut-form">
+       <p><b>Boyut Seç </b> <span style={{ color: "#CE2829" }}>*</span></p>
+      <br />  
+      <label htmlFor="pizza-kucuk">
+      <input type="radio" id="pizza-kucuk" name="pizzaBoyutu" value="Küçük" checked={boyut === "Küçük"} onChange={(e) => setBoyut(e.target.value)}/>
+      Küçük
+      </label>
+  
+      <label htmlFor="pizza-orta">
+    <input type="radio" id="pizza-orta" name="pizzaBoyutu" value="Orta" checked={boyut === "Orta"} onChange={(e) => setBoyut(e.target.value)}/>
+    Orta
+   </label>
+  
+   <label htmlFor="pizza-buyuk">
+    <input type="radio" id="pizza-buyuk" name="pizzaBoyutu" value="Büyük" checked={boyut === "Büyük"} onChange={(e) => setBoyut(e.target.value)}/>
+    Büyük
+     </label>
+    </div>
+   <div className="hamur-form">
+    <p><b>Hamur Seç </b> <span style={{ color: "#CE2829" }}>*</span></p>
+      <br />
+      <select
+        id="hamur"
+        name="hamur"
+        value={hamur}
+        onChange={handleChange}
+        required
+      >
+        <option value=""disabled hidden>Hamur Kalınlığı</option>
+        <option value="ince">İnce Hamur</option>
+        <option value="orta">Orta Hamur</option>
+        <option value="kalin">Kalın Hamur</option>
+      </select>
+    </div>
+    <div id="ek-malzeme-section">
+    <p><b>Ek Malzemeler</b></p>
+    <br />
+    <p>En Fazla 10 malzeme seçebilirsiniz. 5₺</p>
+      <label>
+    <input type="checkbox" name="malzemeler" value="Pepperoni"  onChange={handleMalzemeChange} />
+    Pepperoni 
+  </label>
+
+  <label>
+    <input type="checkbox" name="malzemeler" value="Sosis"   onChange={handleMalzemeChange}/>
+    Sosis
+  </label>
+
+  <label>
+    <input type="checkbox" name="malzemeler" value="Kanada Jambonu"  onChange={handleMalzemeChange}/>
+    Kanada Jambonu
+  </label>
+
+  <label>
+    <input type="checkbox" name="malzemeler" value="Tavuk Izgara"  onChange={handleMalzemeChange}/>
+    Tavuk Izgara
+  </label>
+
+  <label>
+    <input type="checkbox" name="malzemeler" value="Soğan"  onChange={handleMalzemeChange} />
+    Soğan
+  </label>
+
+  <label>
+    <input type="checkbox" name="malzemeler" value="Domates"  onChange={handleMalzemeChange}/>
+    Domates
+  </label>
+
+  <label>
+    <input type="checkbox" name="malzemeler" value="Mısır"  onChange={handleMalzemeChange}/>
+    Mısır
+  </label>
+
+  <label>
+    <input type="checkbox" name="malzemeler" value="Jalepeno"  onChange={handleMalzemeChange}/>
+    Jalepeno
+  </label>
+
+  <label>
+    <input type="checkbox" name="malzemeler" value="Sarımsak"  onChange={handleMalzemeChange}/>
+    Sarımsak
+  </label>
+
+  <label>
+    <input type="checkbox" name="malzemeler" value="Biber"  onChange={handleMalzemeChange}/>
+    Biber
+  </label>
+
+  <label>
+    <input type="checkbox" name="malzemeler" value="Sucuk"  onChange={handleMalzemeChange}/>
+    Sucuk
+  </label>
+
+  <label>
+    <input type="checkbox" name="malzemeler" value="Ananas"  onChange={handleMalzemeChange}/>
+    Ananas
+  </label>
+
+  <label>
+    <input type="checkbox" name="malzemeler" value="Kabak"  onChange={handleMalzemeChange}/>
+    Kabak
+  </label>
+  </div>
+  <div className="isim-alani">
+  <label htmlFor="isim"><b>İsim</b></label>
+  <input
+    type="text"
+    id="isim"
+    name="isim"
+    placeholder="Adınızı girin"
+    minLength={3}
+    required
+    value ={isim}
+    onChange= {(e) =>setIsim(e.target.value)}
+  />
+</div>
+    <div className="siparis-notu">
+  
+         <label htmlFor="siparis-notu"><b>Sipariş Notu </b></label>
+        <textarea name="siparis-notu"
+         id="siparis-notu" 
+         rows="3"
+         cols="50"
+         placeholder="Siparişine eklemek istediğin bir not var mı?" ></textarea>
+         <hr />
+           <div className="counter">
+
+        <button id="decrease" type="button"  onClick={decreaseAdet}>-</button>
+        <div id="value">{adet}</div>
+
+        <button id="increase" type="button"  onClick={increaseAdet}>+</button>
+
+      <div className="siparis-toplami">
+        <p><b>Sipariş Toplamı </b></p>
+        <div id="secimler">
+          <p>Seçimler</p>
+          </div>
+          <div id="secim-tutari"></div> 
+            <p>{malzemeler.length * extra * adet}₺</p>
+      </div>
+      <div id="toplam-tutar">
+      <p style={{ color: "#CE2829" }}><b>Toplam</b></p>
+
+      </div>
+      <div id="toplam-fiyat">
+         <p><b> {toplam.toFixed(2)}₺</b></p>
+
+      </div>
+      <button type="submit" disabled={!formValid || isSubmitting}>
+          {isSubmitting ? "Gönderiliyor..." : "SİPARİŞ VER"}
+        </button>
+  </div>
+    </div>
+    </div>
+   </div>
+
+
+  </form>
+    </>
+    
+  );
+}
+
+export default Form

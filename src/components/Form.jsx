@@ -132,7 +132,7 @@ const decreaseAdet = () => {
 
            <div className="boyut-form">
        <p><b>Boyut Seç </b> <span style={{ color: "#CE2829" }}>*</span></p>
-      <br />  
+       
       <label htmlFor="pizza-kucuk">
       <input type="radio" id="pizza-kucuk" name="pizzaBoyutu" value="Küçük" checked={boyut === "Küçük"} onChange={(e) => setBoyut(e.target.value)}/>
       Küçük
@@ -150,7 +150,8 @@ const decreaseAdet = () => {
     </div>
    <div className="hamur-form">
     <p><b>Hamur Seç </b> <span style={{ color: "#CE2829" }}>*</span></p>
-      <br />
+      
+      <div className='hamur-secimi'>
       <select
         id="hamur"
         name="hamur"
@@ -164,10 +165,13 @@ const decreaseAdet = () => {
         <option value="kalin">Kalın Hamur</option>
       </select>
     </div>
+    </div>
     <div id="ek-malzeme-section">
     <p><b>Ek Malzemeler</b></p>
-    <br />
     <p>En Fazla 10 malzeme seçebilirsiniz. 5₺</p>
+    </div>
+    <br/>
+    <div className="urunler">
       <label>
     <input type="checkbox" name="malzemeler" value="Pepperoni"  onChange={handleMalzemeChange} />
     Pepperoni 
@@ -232,8 +236,12 @@ const decreaseAdet = () => {
     <input type="checkbox" name="malzemeler" value="Kabak"  onChange={handleMalzemeChange}/>
     Kabak
   </label>
+  
   </div>
+  <br/>
+
   <div className="isim-alani">
+      
   <label htmlFor="isim"><b>İsim</b></label>
   <input
     type="text"
@@ -255,37 +263,41 @@ const decreaseAdet = () => {
          cols="50"
          placeholder="Siparişine eklemek istediğin bir not var mı?" ></textarea>
          <hr />
-           <div className="counter">
-
-        <button id="decrease" type="button"  onClick={decreaseAdet}>-</button>
-        <div id="value">{adet}</div>
-
-        <button id="increase" type="button"  onClick={increaseAdet}>+</button>
-
-      <div className="siparis-toplami">
-        <p><b>Sipariş Toplamı </b></p>
-        <div id="secimler">
-          <p>Seçimler</p>
-          </div>
-          <div id="secim-tutari"></div> 
-            <p>{malzemeler.length * extra * adet}₺</p>
-      </div>
-      <div id="toplam-tutar">
-      <p style={{ color: "#CE2829" }}><b>Toplam</b></p>
-
-      </div>
-      <div id="toplam-fiyat">
-         <p><b> {toplam.toFixed(2)}₺</b></p>
-
-      </div>
-      <button type="submit" disabled={!formValid || isSubmitting}>
           {isSubmitting ? "Gönderiliyor..." : "SİPARİŞ VER"}
-        </button>
-  </div>
+         
+
+         
+     <div className="siparis-wrapper">
+  <div className="counter">
+    <div className="counter-buttons">
+      <button id="decrease" type="button" onClick={decreaseAdet}>-</button>
+      <div id="value">{adet}</div>
+      <button id="increase" type="button" onClick={increaseAdet}>+</button>
     </div>
+  </div>
+  
+  <div className="siparis-toplami">
+    <p className="baslik"><b>Sipariş Toplamı</b></p>
+    <div className="secim-satiri">
+      <p className="secimler">Seçimler</p>
+      <p>{malzemeler.length * extra * adet}₺</p>
+    </div>
+    <div className="secim-satiri">
+      <p className="toplam-label">Toplam</p>
+      <p className="toplam-fiyat">{toplam.toFixed(2)}₺</p>
+    </div>
+    
+    <button 
+      type="submit" 
+      className="siparis-ver-btn"
+      disabled={!formValid || isSubmitting}>
+      {isSubmitting ? "Gönderiliyor..." : "SİPARİŞ VER"}
+    </button>
+  </div>
+</div>
     </div>
    </div>
-
+</div>
 
   </form>
     </>

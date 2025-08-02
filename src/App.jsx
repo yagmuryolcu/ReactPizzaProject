@@ -1,11 +1,15 @@
-import { useState , useEffect} from 'react'
-import { Form } from "./components/Form";
-import './App.css'
+import { useState, useEffect } from 'react';
+import './App.css';
+import { FormHeader } from './components/FormHeader';
+import { Form } from './components/Form';
 
 function App() {
-
-      return <Form />;
-   
+  return (
+    <>
+      <FormHeader />
+      <Form />
+    </>
+  );
 }
 
-export default App
+export default App;

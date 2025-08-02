@@ -1,0 +1,29 @@
+    .header {
+    background-color: #CE2829;
+    padding: 2rem 0 1rem;
+    text-align: center;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    }
+
+    .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    }
+
+    .nav-links {
+    font-size: 0.9rem;
+    text-align: left;
+    padding-left: 1.5rem;
+    }
+
+    .nav-home {
+    color: #fff0e5;
+    text-decoration: none;
+    }
+
+    .current-page {
+    color: white;
+    font-weight: bold;
+    }

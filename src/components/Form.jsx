@@ -112,7 +112,7 @@ const decreaseAdet = () => {
             <div className="pizza-name">
             <h1>Position Absolute Acı Pizza</h1>
             <div className="pizza-sabit-fiyat">
-            <p><b>85.50₺</b></p>
+                 <p><span className="pizza-fiyat">85.50₺</span></p>
             <div className="pizza-puan">
             <span>4.9</span>
            <span>(200)</span>
@@ -263,7 +263,6 @@ const decreaseAdet = () => {
          cols="50"
          placeholder="Siparişine eklemek istediğin bir not var mı?" ></textarea>
          <hr />
-          {isSubmitting ? "Gönderiliyor..." : "SİPARİŞ VER"}
          
 
          
@@ -275,18 +274,19 @@ const decreaseAdet = () => {
       <button id="increase" type="button" onClick={increaseAdet}>+</button>
     </div>
   </div>
-  
+    <div className="siparis-sag-kisim">
+
   <div className="siparis-toplami">
     <p className="baslik"><b>Sipariş Toplamı</b></p>
     <div className="secim-satiri">
       <p className="secimler">Seçimler</p>
-      <p>{malzemeler.length * extra * adet}₺</p>
+    <p className="secim-fiyati">{malzemeler.length * extra * adet}₺</p>
     </div>
     <div className="secim-satiri">
       <p className="toplam-label">Toplam</p>
       <p className="toplam-fiyat">{toplam.toFixed(2)}₺</p>
     </div>
-    
+    </div>
     <button 
       type="submit" 
       className="siparis-ver-btn"

@@ -1,0 +1,235 @@
+footer {
+    background-color: #1A1A1A;
+    color: white;
+    padding: 70px 0 30px;
+    font-family: 'Barlow';
+    width: 100%;
+  }
+
+  .footer-part {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .footer-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid #444;
+    margin-top: 30px;
+  }
+
+  .footer-icon p {
+    color: #FAF7F2;
+    font-size: 16px;
+    margin: 0;
+    font-family: 'Barlow';
+    width: 332px;
+  }
+
+  .footer-icon .fab.fa-twitter  {
+    width: 18px;
+    height: 14.62px;
+    fill: #FFFFFF;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+
+  .contact-and-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .hot-menu,
+  .instagram-img {
+    min-height: 300px; 
+
+  }
+        /*   iletişim kısmı */
+
+
+  .contact-and-menu > * {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .contact h2 {
+    color: #FAF7F2;
+    font-size: 3rem;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    line-height: 50px;
+    width:251px;
+    font-family: Londrina Solid;
+    align-items: flex-start;
+  }
+
+  .contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contact li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #FAF7F2;
+    gap: 6px;
+    font-family: 'Barlow';
+    font-size:1.1rem;
+    line-height: 32px;
+  }
+
+  .contact li p {
+    margin: 0;
+    font-size: 24px;
+    margin-right: 10px;
+    flex: 1;
+    font-family: 'Barlow';
+    gap: 30px;
+  }
+
+  .contact li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+        /*   menü ksımı */
+
+  .hot-menu {
+    color: #FAF7F2;
+  }
+
+  .hot-menu > p {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: 'Barlow';
+  }
+
+  .hot-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hot-menu li {
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #FAF7F2;
+    line-height: 1.4;
+  }
+
+  .instagram-img {
+    color: #FAF7F2;
+    border-radius: 3px;
+    width:104px;
+    height: 94.5px;
+  }
+
+  .instagram-img > p {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  .instagram-img ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .instagram-img li {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .instagram-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+      @media (max-width: 768px) {
+      
+    .footer-part {
+    padding: 30px 30px 10px 70px; /* Sağdan soldan eşit padding */
+    width: 100%;
+  }
+  
+  .contact-and-menu {
+    flex-direction: column;
+    gap: 30px;
+    justify-content: flex-start;
+    width: 100%;
+  } 
+  
+  .contact {
+    width: 100%;
+    text-align: left; /* Sol hizalama */
+  }
+
+ 
+   .contact h2 {
+    font-size: 2.5rem;
+    width: 250px;
+    flex-wrap: wrap;
+  }
+  
+  .contact ul {
+    width: 100%;
+  }
+  
+  .contact li {
+    flex-wrap: wrap; 
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .contact li p {
+    font-size: 16px; /* Daha küçük font */
+    line-height: 1.4;
+    word-wrap: break-word; 
+  }
+  
+  .footer-icon {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding-top: 20px;
+    flex-wrap: nowrap; 
+  }
+
+  .footer-icon p {
+    font-size: 14px;
+        width: 332px;
+
+  }
+}
+@media (min-width: 769px) and (max-width: 1080px) {
+
+    .contact-and-menu {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+   .footer-part {
+    padding: 30px 30px 10px 70px; /* Sağdan soldan eşit padding */
+    width: 100%;
+  }
+}

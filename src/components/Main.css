@@ -1,0 +1,466 @@
+ #second-food-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Flexbox ile sipariş kartları düzeni */
+  .siparis-ver {
+    display: flex;
+    gap: 20px;
+    height: 400px;
+    max-width: 1072px;
+    margin: 0 auto;
+  }
+
+  .birinci-siparis {
+    background: url("/images/iteration-2-images/cta/kart-1.png") no-repeat center;
+    background-size: cover;
+    border-radius: 15px;
+    padding: 30px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden; 
+    flex: 1;
+    min-width: 400px;
+  }
+
+  .birinci-siparis .siparis-basligi {
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 15px;
+    font-family: 'Roboto Condensed';
+  }
+
+  .birinci-siparis .siparis-icerigi {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  /* Sağ taraftaki kartlar için flex container */
+  .layout {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+  }
+
+  .ikinci-siparis {
+    background: url("/images/iteration-2-images/cta/kart-2.png") no-repeat center;
+    background-size: cover;
+    border-radius: 15px;
+    padding: 30px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+  }
+
+  .ikinci-siparis > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .ikinci-siparis .siparis-basligi {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Barlow';
+  }
+
+  .ucuncu-siparis {
+    background: url("/images/iteration-2-images/cta/kart-3.png") no-repeat center;
+    background-size: cover;
+    border-radius: 15px;
+    padding: 30px;
+    color: #2c2c2c;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+  }
+
+  .ucuncu-siparis .siparis-basligi {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  .kirmizi-yazi {
+    color: #ce2029;
+  }
+
+  .siparis-butonu {
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+    align-self: flex-start;
+  }
+
+  .siparis-butonu:hover {
+    background-color: red;
+    color: white;
+  }
+
+  .second-slogan {
+    color: #CE2829;
+    font-family: 'Satisfy';
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+  }
+
+  .lezzet {
+    color: #1a1a1a;
+    font-family: 'Barlow';
+    font-size: 2.8rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    line-height: 52px;
+    font-weight: 1000;
+    color: #292929;
+  }
+        /*   ingilizce menü kısmı ayarları */
+
+
+  .menu-2 {
+    margin: 20px;
+    display: flex;
+    justify-content: center; 
+    gap: 20px;           
+  }
+
+  .menu-2 ul {
+    display: flex;           
+    list-style: none;       
+    padding: 0;
+    margin: 0;
+    gap: 20px;     
+    justify-content: space-between;
+  }          
+
+  .menu-2 ul li {
+    display: inline-flex;   
+  }
+  .menu-2 ul li:nth-child(2) button {
+    background-color: black;
+    color: white; 
+    padding: 10px 10px;
+  }
+
+  .menu-2 ul li button {
+    display: flex;          
+    align-items: center;
+    gap: 15px;              
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: white;
+    color: #292929;
+    font-family: 'Barlow', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+    
+  }
+
+  .menu-2 ul li button:hover {
+    background-color: #292929;
+    color: white;
+  }
+
+  .menu-2 ul li button img {
+    width: 50px;
+    height: 50px;
+  }
+        /*   pizza görselleri-text ayarları */
+
+    
+  .pizza-section {
+    display: flex;            
+    gap: 20px;                
+    justify-content: center;  
+    align-items: flex-start; 
+    padding: 20px;
+    flex-wrap: nowrap;       
+  }
+
+  .pizza-box {
+    background-color: white;
+    gap: 30px;
+    border-radius: 12px;
+    padding: 32px;
+    width: 350px;
+    height: 419px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    position: relative; 
+      margin-bottom: 40px;
+  }
+
+  .pizza-box img {
+    width: 265px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+
+  .pizza-name {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 38px;
+    font-family: 'Barlow';
+  }
+
+  .pizza-info-group {
+    display: flex;
+    gap: 25px;
+    bottom: 10px;
+    left: 215;
+    width: 100%;
+    height: 25px;
+    font-size: 0.9rem;
+    color: black;
+    gap: 120px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Barlow';
+    position: absolute;
+  }
+
+  .pizza-info-group p {
+    margin: 10px;
+  }
+
+  .pizza-info-group .right-group {
+      display: flex;
+      gap: 20px; /* (200) ve 60₺ arasında boşluk */
+      align-items: center;
+  }
+
+  .pizza-info-group span {
+    display: flex;
+    gap: 25px;
+    font-size: 0.9rem;
+    color: black;
+    justify-content: center;
+    margin-left: 10px;
+  }
+    @media (max-width: 768px) {
+
+         .siparis-ver {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .birinci-siparis,
+  .ikinci-siparis,
+  .ucuncu-siparis {
+    min-width: 280px;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .birinci-siparis .siparis-basligi {
+    font-size: 3rem;
+    line-height: 0.9;
+  }
+
+  .ikinci-siparis .siparis-basligi,
+  .ucuncu-siparis .siparis-basligi {
+    font-size: 1.4rem;
+  }
+
+  /* Menü butonları mobil */
+  .menu-2 ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .menu-2 ul li {
+    width: 100%;
+    max-width: 160px;
+        display: inline-flex;   
+  }
+
+  .menu-2 ul li button {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    justify-content: center;
+       white-space: nowrap;
+
+  }
+
+  .menu-2 ul li button img {
+    width: 40px;
+    height: 40px;
+  }
+  
+    .menu-2 ul li:nth-child(2) {
+   max-width: 120px;
+   
+}
+
+  .menu-2 ul li:nth-child(2) button {
+    background-color: black;
+    color: white;
+    padding: 8px 10px;
+    font-size: 1rem;
+    min-width: 90px;
+  }
+
+
+.menu-2 ul li:nth-child(2) button img {
+   width: 32px;
+   height: 32px;
+}
+  /* Pizza section mobil */
+  .pizza-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+  }
+
+  .pizza-box {
+    width: 100%;
+    max-width: 320px;
+    min-width: 280px;
+  }
+   
+      .lezzet {
+            color: #292929;
+            font-family: 'Barlow', sans-serif;
+            font-size: 2.8rem;
+            display: flex;
+            text-align: center;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            line-height: 1.1;
+            width: fit-content;
+            min-width: 308px;
+            white-space: pre-line;
+        }
+      
+  
+    .second-slogan {
+    color: #CE2829;
+    font-family: 'Satisfy';
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    font-size: 22px;
+
+  }
+    }
+
+    @media (min-width: 769px) and (max-width: 1080px) {
+
+
+         .siparis-ver {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+  }
+
+  .birinci-siparis,
+  .ikinci-siparis,
+  .ucuncu-siparis {
+    width: 90vw;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+    min-height: 200px;
+  }
+
+  .pizza-section {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pizza-box {
+    width: 100%;
+    max-width: 320px;
+  }
+.menu-2 ul {
+    flex-wrap: wrap;
+    justify-content: center;
+        justify-items: center;
+            grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+   
+
+  .menu-2 ul li {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu-2 ul li button {
+    width: 100%;
+    justify-content: center;
+        align-items: center;
+    gap: 15px;              
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: white;
+    color: #292929;
+
+  }
+    
+  .menu-2 ul li:nth-child(2) {
+   max-width: 150px;
+  }
+
+  .menu-2 ul li:nth-child(2) button {
+   padding: 8px 10px;
+   font-size: 0.8rem;
+   background-color: #1A1A1A;
+   color: #f9f9f9;
+  }
+
+  .menu-2 ul li:nth-child(2) button img {
+   width: 32px;
+   height: 32px;
+   }
+}

@@ -1,4 +1,6 @@
 import './Header.css';
+import { Link } from 'react-router-dom';
+
 function Header() {
   return (
     <>
@@ -13,7 +15,7 @@ function Header() {
                 KOD ACIKTIRIR <br /> PİZZA, DOYURUR
               </span>
             </div>
-            <a href="#" className="hungry-button">ACIKTIM</a>
+            <Link to="/form" className="hungry-button">ACIKTIM</Link>
           </div>
         </section>
       </header>

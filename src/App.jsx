@@ -5,8 +5,17 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Main from './components/Main';
+import Success from './components/Success';
+import { useState } from 'react';
+import './index.css';
+
+
+
 
 function App() {
+
+      const [siparis,setSiparis] =useState(null);
+
   return (
     <Router>
       <Switch>
@@ -21,9 +30,15 @@ function App() {
         {/* Form sayfası */}
         <Route path="/form" exact>
           <FormHeader />
-          <Form />
+          <Form setSiparis= {setSiparis} />
           <Footer /> 
         </Route>
+
+        {/* Sipariş Başarı Sayfası */}
+        <Route path="/success" exact>
+          <Success siparis={siparis} />
+        </Route>
+
       </Switch>
     </Router>
   );

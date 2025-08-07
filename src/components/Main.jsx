@@ -1,4 +1,5 @@
 import './Main.css';
+import  { Link } from 'react-router-dom';
 function Main() {
   return (
     <>
@@ -11,9 +12,9 @@ function Main() {
                   Özel<br />Lezzetus
                 </h2>
                 <p className="siparis-icerigi">Position: Absolute Acı Burger</p>
-                <a href="#" className="siparis-butonu">
+                <Link to="/form" className="siparis-butonu">
                   SİPARİŞ VER
-                </a>
+                  </Link>
               </div>
             </div>
 
@@ -23,9 +24,9 @@ function Main() {
                   <h2 className="siparis-basligi">
                     Hackathlon <br />Burger Menu
                   </h2>
-                  <a href="#" className="siparis-butonu">
+                <Link to="/form" className="siparis-butonu">
                     SİPARİŞ VER
-                  </a>
+                    </Link>
                 </div>
               </div>
 
@@ -36,9 +37,9 @@ function Main() {
                     <br />
                     npm gibi kurye
                   </h2>
-                  <a href="#" className="siparis-butonu">
+                <Link to="/form" className="siparis-butonu">
                     SİPARİŞ VER
-                  </a>
+                    </Link>
                 </div>
               </div>
             </div>

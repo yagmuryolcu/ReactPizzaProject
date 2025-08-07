@@ -3,6 +3,8 @@ import axios from 'axios'
 import './Form.css'
 import FormHeader from './FormHeader.jsx';
 import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 export function Form({ setSiparis }) {
     
@@ -168,11 +170,18 @@ export function Form({ setSiparis }) {
   return (
     <>
       <form onSubmit={handleSubmit}>
-
-        <div id="pizza-section">
-          <div id= "pizza-secimi">
+        <div id="pizza-secimi">
+          <div className="pizza-content-container">
+            <div className="pizza-image-wrapper">
+              <img src='/images/iteration-2-images/pictures/form-banner.png' alt="Pizza" className="pizza-image" />
+            </div>
+               <nav className="nav-links">
+        <Link to="/" className="nav-home">Anasayfa</Link>
+        <Link to="/form" className="current-page"> - Sipariş Oluştur</Link>
+      </nav>
+    
             <div className="pizza-name">
-              <h1>Position Absolute Acı Pizza</h1>
+              <h1 >Position Absolute Acı Pizza</h1>
               <div className="pizza-sabit-fiyat">
                 <p><span className="pizza-fiyat">85.50₺</span></p>
                 <div className="pizza-puan">
@@ -181,7 +190,7 @@ export function Form({ setSiparis }) {
                 </div>
               </div>
             </div>
-          
+            
             <div className="pizza-aciklama">
               <p>Frontent Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre. 
                 Pizza, domates, peynir ve genellikle çeşitli diğer malzemelerle kaplanmış,
@@ -191,9 +200,10 @@ export function Form({ setSiparis }) {
               </p>
             </div>
           </div>
+        </div>
 
+        <div className="form-sections">
           <div id="pizza-boyut-kalınlık" className="pizza-secim-container">
-
             <div className="boyut-form">
               <p><b>Boyut Seç </b> <span style={{ color: "#CE2829" }}>*</span></p>
               <div className="radio-container">
@@ -255,14 +265,15 @@ export function Form({ setSiparis }) {
                 </select>
               </div>
             </div>
-
           </div>
 
           <div id="ek-malzeme-section">
             <p><b>Ek Malzemeler</b></p>
             <p>En Fazla 10 malzeme seçebilirsiniz. 5₺</p>
           </div>
+          
           <br/>
+          
           <div className="urunler">
             <label>
               <input type="checkbox" name="malzemeler" value="Pepperoni" onChange={handleMalzemeChange} checked={malzemeler.includes("Pepperoni")} />
@@ -334,6 +345,7 @@ export function Form({ setSiparis }) {
               Kabak
             </label>
           </div>
+          
           <br/>
 
           <div className="isim-alani">
@@ -362,28 +374,27 @@ export function Form({ setSiparis }) {
               onChange={(e) => setSiparisNotu(e.target.value)}
             ></textarea>
             <hr />
-            
-            <div className="siparis-wrapper">
-              <div className="counter">
-                <div className="counter-buttons">
-                  <button id="decrease" type="button" onClick={decreaseAdet}>-</button>
-                  <div id="value">{adet}</div>
-                  <button id="increase" type="button" onClick={increaseAdet}>+</button>
+                
+                <div className="siparis-wrapper">
+                <div className="counter">
+                    <div className="counter-buttons">
+                    <button id="decrease" type="button" onClick={decreaseAdet}>-</button>
+                    <div id="value">{adet}</div>
+                    <button id="increase" type="button" onClick={increaseAdet}>+</button>
+                    </div>
                 </div>
-              </div>
-              <div className="siparis-sag-kisim">
-
-                <div className="siparis-toplami">
-                  <p className="baslik"><b>Sipariş Toplamı</b></p>
-                  <div className="secim-satiri">
-                    <p className="secimler">Seçimler</p>
-                    <p className="secim-fiyati">{malzemeler.length * extra * adet}₺</p>
-                  </div>
-                  <div className="secim-satiri">
-                    <p className="toplam-label">Toplam</p>
-                    <p className="toplam-fiyat">{toplam.toFixed(2)}₺</p>
-                  </div>
-                </div>
+                <div className="siparis-sag-kisim">
+                    <div className="siparis-toplami">
+                    <p className="baslik"><b>Sipariş Toplamı</b></p>
+                    <div className="secim-satiri">
+                        <p className="secimler">Seçimler</p>
+                        <p className="secim-fiyati">{malzemeler.length * extra * adet}₺</p>
+                    </div>
+                    <div className="secim-satiri">
+                        <p className="toplam-label">Toplam</p>
+                        <p className="toplam-fiyat">{toplam.toFixed(2)}₺</p>
+                    </div>
+                    </div>
                 <button 
                   type="submit" 
                   className="siparis-ver-btn"

@@ -17,6 +17,7 @@ export function Form({ setSiparis }) {
   const [isim,setIsim] =useState("");
   const [boyut, setBoyut] = useState("");
   const [siparisNotu, setSiparisNotu] = useState("");
+  
 
   const increaseAdet = () => {
     setAdet(adet + 1);
@@ -170,6 +171,7 @@ export function Form({ setSiparis }) {
   return (
     <>
       <form onSubmit={handleSubmit}>
+        
         <div id="pizza-secimi">
           <div className="pizza-content-container">
             <div className="pizza-image-wrapper">

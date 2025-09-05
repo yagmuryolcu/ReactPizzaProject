@@ -93,3 +93,31 @@ hr {
   font-weight: 600;
   line-height: 24.76px;
 }
+.home-button {
+  display: inline-block;
+  font-family: 'Barlow';
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+  border: 2px solid #FDC913;
+  cursor: pointer;
+  background-color: #FDC913; /* ana renk */
+  color: #CE2829; /* kontrast yazı */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.home-button:hover {
+  background-color: transparent;
+  color: #FDC913;
+  border-color: #FDC913;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(253, 201, 19, 0.4);
+}
+
+.home-button:active {
+  transform: translateY(0);
+}

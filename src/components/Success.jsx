@@ -1,5 +1,6 @@
 import './Success.css';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 function Success({ siparis }) {
   if (!siparis) {
@@ -34,6 +35,10 @@ function Success({ siparis }) {
             <p>{siparis.toplam}₺</p>
           </div>
         </div>
+
+        <Link to="/" className="home-button">
+          Ana Menüye Dön
+        </Link>
       </div>
       <Footer />
     </>

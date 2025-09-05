@@ -8,14 +8,12 @@ import Main from './components/Main';
 import Success from './components/Success';
 import { useState } from 'react';
 import './index.css';
-
-
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-
-      const [siparis,setSiparis] =useState(null);
-
+  const [siparis, setSiparis] = useState(null);
+  
   return (
     <Router>
       <Switch>
@@ -26,20 +24,36 @@ function App() {
           <Main />
           <Footer />
         </Route>
-
+        
         {/* Form sayfası */}
         <Route path="/form" exact>
           <FormHeader />
-          <Form setSiparis= {setSiparis} />
-          <Footer /> 
+          <Form setSiparis={setSiparis} />
+          <Footer />
         </Route>
-
+        
         {/* Sipariş Başarı Sayfası */}
         <Route path="/success" exact>
           <Success siparis={siparis} />
         </Route>
-
       </Switch>
+      
+      {/* Toast Container - Burada eklendi */}
+      <ToastContainer 
+        position="top-right"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        toastStyle={{
+          color: 'white'
+        }}
+      />
     </Router>
   );
 }

@@ -4,7 +4,7 @@ import './Form.css'
 import FormHeader from './FormHeader.jsx';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-
+import { toast } from 'react-toastify'
 
 export function Form({ setSiparis }) {
     
@@ -138,7 +138,7 @@ export function Form({ setSiparis }) {
       console.log("Sipariş Tarihi:", response.data.createdAt);
       console.log("=====================");
       
-      alert("Siparişiniz başarıyla alındı! ");
+      toast.success("Tebrikler ! Siparişiniz başarıyla alındı!");
       setIsim("");
       setBoyut("");
       setHamur("");
@@ -148,7 +148,7 @@ export function Form({ setSiparis }) {
       
     } catch (error) {
       console.error("Sipariş gönderilirken hata oluştu:", error);
-      alert("Sipariş gönderilirken bir hata oluştu. Lütfen tekrar deneyin.");
+      toast.error("Sipariş gönderilirken bir hata oluştu. Lütfen tekrar deneyin.");
     } finally {
       setIsSubmitting(false);
     }
@@ -272,6 +272,10 @@ export function Form({ setSiparis }) {
           <div id="ek-malzeme-section">
             <p><b>Ek Malzemeler</b></p>
             <p>En Fazla 10 malzeme seçebilirsiniz. 5₺</p>
+            {/* Seçili malzeme sayısını göster */}
+            <p style={{ fontSize: "14px", color: malzemeler.length < 4 ? "#CE2829" : "#666", margin: "5px 0" }}>
+              {malzemeler.length}/10 malzeme seçildi {malzemeler.length < 4 && "(En az 4 gerekli)"}
+            </p>
           </div>
           
           <br/>
@@ -362,6 +366,9 @@ export function Form({ setSiparis }) {
               value={isim}
               onChange={(e) => setIsim(e.target.value)}
             />
+            <p style={{ fontSize: "14px", color: isim.length < 3 && isim.length > 0 ? "#CE2829" : "#666", margin: "5px 0" }}>
+              En az 3 harfli olmalı
+            </p>
           </div>
 
           <div className="siparis-notu">
@@ -377,26 +384,26 @@ export function Form({ setSiparis }) {
             ></textarea>
             <hr />
                 
-                <div className="siparis-wrapper">
-                <div className="counter">
-                    <div className="counter-buttons">
-                    <button id="decrease" type="button" onClick={decreaseAdet}>-</button>
-                    <div id="value">{adet}</div>
-                    <button id="increase" type="button" onClick={increaseAdet}>+</button>
-                    </div>
+            <div className="siparis-wrapper">
+              <div className="counter">
+                <div className="counter-buttons">
+                  <button id="decrease" type="button" onClick={decreaseAdet}>-</button>
+                  <div id="value">{adet}</div>
+                  <button id="increase" type="button" onClick={increaseAdet}>+</button>
                 </div>
-                <div className="siparis-sag-kisim">
-                    <div className="siparis-toplami">
-                    <p className="baslik"><b>Sipariş Toplamı</b></p>
-                    <div className="secim-satiri">
-                        <p className="secimler">Seçimler</p>
-                        <p className="secim-fiyati">{malzemeler.length * extra * adet}₺</p>
-                    </div>
-                    <div className="secim-satiri">
-                        <p className="toplam-label">Toplam</p>
-                        <p className="toplam-fiyat">{toplam.toFixed(2)}₺</p>
-                    </div>
-                    </div>
+              </div>
+              <div className="siparis-sag-kisim">
+                <div className="siparis-toplami">
+                  <p className="baslik"><b>Sipariş Toplamı</b></p>
+                  <div className="secim-satiri">
+                    <p className="secimler">Seçimler</p>
+                    <p className="secim-fiyati">{malzemeler.length * extra * adet}₺</p>
+                  </div>
+                  <div className="secim-satiri">
+                    <p className="toplam-label">Toplam</p>
+                    <p className="toplam-fiyat">{toplam.toFixed(2)}₺</p>
+                  </div>
+                </div>
                 <button 
                   type="submit" 
                   className="siparis-ver-btn"

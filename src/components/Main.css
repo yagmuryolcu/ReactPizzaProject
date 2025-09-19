@@ -20,7 +20,7 @@ main {
   }
 
   .birinci-siparis {
-    background: url("/images/iteration-2-images/cta/kart-1.png") no-repeat center;
+    background: url("src/images/iteration-2-images/cta/kart-1.png") no-repeat center;
     background-size: cover;
     border-radius: 15px;
     padding: 30px 155px 20px 0px;
@@ -59,7 +59,7 @@ main {
   }
 
   .ikinci-siparis {
-    background: url("/images/iteration-2-images/cta/kart-2.png") no-repeat center;
+    background: url("src/images/iteration-2-images/cta/kart-2.png") no-repeat center;
     background-size: cover;
     border-radius: 15px;
     padding: 30px 100px 30px 5px;
@@ -88,7 +88,7 @@ main {
   }
 
   .ucuncu-siparis {
-    background: url("/images/iteration-2-images/cta/kart-3.png") no-repeat center;
+    background: url("src/images/iteration-2-images/cta/kart-3.png") no-repeat center;
     background-size: cover;
     border-radius: 15px;
     padding: 30px 100px 30px 5px;

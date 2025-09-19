@@ -10,18 +10,18 @@ function Footer() {
               <h2>Teknolojik Yemekler</h2>
               <ul>
                 <li>
-                  <img src="/images/iteration-2-images/footer/icons/icon-1.png" />
+                  <img src="src/images/iteration-2-images/footer/icons/icon-1.png" />
                   <p>
                     341 Londonderry Road, <br />
                     Istanbul Türkiye
                   </p>
                 </li>
                 <li>
-                  <img src="/images/iteration-2-images/footer/icons/icon-2.png" />
+                  <img src="src/images/iteration-2-images/footer/icons/icon-2.png" />
                   <p>aciktim@teknolojikyemekler.com</p>
                 </li>
                 <li>
-                  <img src="/images/iteration-2-images/footer/icons/icon-3.png" />
+                  <img src="src/images/iteration-2-images/footer/icons/icon-3.png" />
                   <p>+90 216 123 45 67</p>
                 </li>
               </ul>
@@ -42,12 +42,12 @@ function Footer() {
             <section className="instagram-img">
               <p>Instagram</p>
               <ul>
-                <li><img src="/images/iteration-2-images/footer/insta/li-0.png" /></li>
-                <li><img src="/images/iteration-2-images/footer/insta/li-1.png" /></li>
-                <li><img src="/images/iteration-2-images/footer/insta/li-2.png" /></li>
-                <li><img src="/images/iteration-2-images/footer/insta/li-3.png" /></li>
-                <li><img src="/images/iteration-2-images/footer/insta/li-4.png" /></li>
-                <li><img src="/images/iteration-2-images/footer/insta/li-5.png" /></li>
+                <li><img src="src/images/iteration-2-images/footer/insta/li-0.png" /></li>
+                <li><img src="src/images/iteration-2-images/footer/insta/li-1.png" /></li>
+                <li><img src="src/images/iteration-2-images/footer/insta/li-2.png" /></li>
+                <li><img src="src/images/iteration-2-images/footer/insta/li-3.png" /></li>
+                <li><img src="src/images/iteration-2-images/footer/insta/li-4.png" /></li>
+                <li><img src="src/images/iteration-2-images/footer/insta/li-5.png" /></li>
               </ul>
             </section>
           </section>

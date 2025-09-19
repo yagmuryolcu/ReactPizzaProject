@@ -58,37 +58,37 @@ function Main() {
           <ul id="pills-tab">
             <li>
               <button id="pills-ramen-tab">
-                <img src="/images/iteration-2-images/icons/1.svg" alt="Ramen" />
+                <img src="src/images/iteration-2-images/icons/1.svg" alt="Ramen" />
                 Ramen
               </button>
             </li>
             <li>
               <button id="pills-pizza-tab">
-                <img src="/images/iteration-2-images/icons/2.svg" alt="Pizza" />
+                <img src="src/images/iteration-2-images/icons/2.svg" alt="Pizza" />
                 Pizza
               </button>
             </li>
             <li>
               <button id="pills-burger-tab">
-                <img src="/images/iteration-2-images/icons/3.svg" alt="Burger" />
+                <img src="src/images/iteration-2-images/icons/3.svg" alt="Burger" />
                 Burger
               </button>
             </li>
             <li>
               <button id="pills-fries-tab">
-                <img src="/images/iteration-2-images/icons/4.svg" alt="French Fries" />
+                <img src="src/images/iteration-2-images/icons/4.svg" alt="French Fries" />
                 French fries
               </button>
             </li>
             <li>
               <button id="pills-fastfood-tab">
-                <img src="/images/iteration-2-images/icons/5.svg" alt="Fast food" />
+                <img src="src/images/iteration-2-images/icons/5.svg" alt="Fast food" />
                 Fast food
               </button>
             </li>
             <li>
               <button id="pills-drinks-tab">
-                <img src="/images/iteration-2-images/icons/6.svg" alt="Soft drinks" />
+                <img src="src/images/iteration-2-images/icons/6.svg" alt="Soft drinks" />
                 Soft drinks
               </button>
             </li>
@@ -98,7 +98,7 @@ function Main() {
         {/* Yemekler */}
         <section className="pizza-section">
           <div className="pizza-box">
-            <img src="/images/iteration-2-images/pictures/food-1.png" alt="Terminal Pizza" />
+            <img src="src/images/iteration-2-images/pictures/food-1.png" alt="Terminal Pizza" />
             <div className="pizza-content">
               <p className="pizza-name">Terminal Pizza</p>
             </div>
@@ -114,7 +114,7 @@ function Main() {
           </div>
 
           <div className="pizza-box">
-            <img src="/images/iteration-2-images/pictures/food-2.png" alt="Position Absolute Pizza" />
+            <img src="src/images/iteration-2-images/pictures/food-2.png" alt="Position Absolute Pizza" />
             <div className="pizza-content">
               <p className="pizza-name">Position Absolute Pizza</p>
             </div>
@@ -130,7 +130,7 @@ function Main() {
           </div>
 
           <div className="pizza-box">
-            <img src="/images/iteration-2-images/pictures/food-3.png" alt="useEffect Tavuklu Burger" />
+            <img src="src/images/iteration-2-images/pictures/food-3.png" alt="useEffect Tavuklu Burger" />
             <div className="pizza-content">
               <p className="pizza-name">useEffect Tavuklu Burger</p>
             </div>

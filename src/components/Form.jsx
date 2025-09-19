@@ -175,7 +175,7 @@ export function Form({ setSiparis }) {
         <div id="pizza-secimi">
           <div className="pizza-content-container">
             <div className="pizza-image-wrapper">
-              <img src='src/images/iteration-2-images/pictures/form-banner.png' alt="Pizza" className="pizza-image" />
+              <img src='/iteration-2-images/pictures/form-banner.png' alt="Pizza" className="pizza-image" />
             </div>
                <nav className="nav-links">
         <Link to="/" className="nav-home">Anasayfa</Link>

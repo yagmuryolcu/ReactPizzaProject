@@ -4,27 +4,27 @@ function Navbar() {
     <>
        <nav className="food-categories">
         <a href="#" className="icon-label">
-            <img src="src/images/iteration-2-images/icons/1.svg" alt="Noodle Resmi" />
+            <img src="/iteration-2-images/foot-icons/1.svg" alt="Noodle Resmi" />
             <span>YENİ! Kore</span>
         </a>
         <a href="#" className="icon-label">
-            <img src="src/images/iteration-2-images/icons/2.svg" alt="Pizza Resmi" />
+            <img src="/iteration-2-images/foot-icons/2.svg" alt="Pizza Resmi" />
             <span>Pizza</span>
         </a>
         <a href="#" className="icon-label">
-            <img src="src/images/iteration-2-images/icons/3.svg" alt="Burger Resmi" />
+            <img src="/iteration-2-images/foot-icons/3.svg" alt="Burger Resmi" />
             <span>Burger</span>
         </a>
         <a href="#" className="icon-label">
-            <img src="src/images/iteration-2-images/icons/4.svg" alt="Patates Kızartması Resmi" />
+            <img src="/iteration-2-images/foot-icons/4.svg" alt="Patates Kızartması Resmi" />
             <span>Kızartmalar</span>
         </a>
         <a href="#" className="icon-label">
-            <img src="src/images/iteration-2-images/icons/5.svg" alt="Fast food Resmi" />
+            <img src="/iteration-2-images/foot-icons/5.svg" alt="Fast food Resmi" />
             <span>Fast food</span>
         </a>
         <a href="#" className="icon-label">
-            <img src="src/images/iteration-2-images/icons/6.svg" alt="İçecek Resmi" />
+            <img src="iteration-2-images/foot-icons/6.svg" alt="İçecek Resmi" />
             <span>Gazlı İçecek</span>
         </a>
     </nav>

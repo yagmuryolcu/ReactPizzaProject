@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Main from './components/Main';
 import Success from './components/Success';
+import ScrollToTop from './components/ScroolToTop';
 import { useState } from 'react';
 import './index.css';
 import { ToastContainer } from 'react-toastify';
@@ -16,6 +17,7 @@ function App() {
   
   return (
     <Router>
+      <ScrollToTop />
       <Switch>
         {/* Anasayfa */}
         <Route path="/" exact>
@@ -35,6 +37,8 @@ function App() {
         {/* Sipariş Başarı Sayfası */}
         <Route path="/success" exact>
           <Success siparis={siparis} />
+          <Footer />
+
         </Route>
       </Switch>
       

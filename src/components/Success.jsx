@@ -40,7 +40,6 @@ function Success({ siparis }) {
           Ana Menüye Dön
         </Link>
       </div>
-      <Footer />
     </>
   );
 }

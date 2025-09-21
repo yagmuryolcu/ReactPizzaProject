@@ -19,10 +19,11 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+        <Analytics />
+
       <Switch>
         {/* Anasayfa */}
         <Route path="/" exact>
-         <Analytics />
           <Header />
           <Navbar />
           <Main />

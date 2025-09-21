@@ -11,6 +11,7 @@ import { useState } from 'react';
 import './index.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [siparis, setSiparis] = useState(null);
@@ -21,6 +22,7 @@ function App() {
       <Switch>
         {/* Anasayfa */}
         <Route path="/" exact>
+         <Analytics />
           <Header />
           <Navbar />
           <Main />
